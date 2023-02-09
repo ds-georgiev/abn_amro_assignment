@@ -20,11 +20,11 @@ export type TVShow = {
   image?: string;
   url?: string;
   genres?: string[];
+  rating: number;
 };
 
 export type TVShowDetails = TVShow & {
   language: string;
-  rating: number;
   summary: string;
   cast?: CastMember[];
 };

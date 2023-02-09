@@ -45,18 +45,18 @@ export default createStore({
     setTVShows(state, data) {
       state.tvShows = data;
 
-      state.comedyShows = state.tvShows.filter((show) =>
-        show.genres?.includes("Comedy")
-      );
-      state.dramaShows = state.tvShows.filter((show) =>
-        show.genres?.includes("Drama")
-      );
-      state.actionShows = state.tvShows.filter((show) =>
-        show.genres?.includes("Action")
-      );
-      state.adventureShows = state.tvShows.filter((show) =>
-        show.genres?.includes("Adventure")
-      );
+      state.comedyShows = state.tvShows
+        .filter((show) => show.genres?.includes("Comedy"))
+        .sort((a, b) => b.rating - a.rating);
+      state.dramaShows = state.tvShows
+        .filter((show) => show.genres?.includes("Drama"))
+        .sort((a, b) => b.rating - a.rating);
+      state.actionShows = state.tvShows
+        .filter((show) => show.genres?.includes("Action"))
+        .sort((a, b) => b.rating - a.rating);
+      state.adventureShows = state.tvShows
+        .filter((show) => show.genres?.includes("Adventure"))
+        .sort((a, b) => b.rating - a.rating);
     },
     setTVSwowDetails(state, data) {
       state.showDetails = JSON.parse(JSON.stringify(data));
@@ -76,6 +76,7 @@ export default createStore({
             image: show.image?.medium,
             url: show.url,
             genres: show.genres,
+            rating: show.rating.average,
           };
         });
         commit("setTVShows", tvShows);
@@ -96,8 +97,8 @@ export default createStore({
             url: data.url,
             genres: data.genres,
             language: data.language,
-            rating: data.rating.average,
             summary: data.summary,
+            rating: data.rating.average,
           };
         });
       await axios
