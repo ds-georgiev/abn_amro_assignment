@@ -25,6 +25,8 @@ The project itself is set using the `vue-cli`:
 - SCSS as CSS preprocessor
 - Jest for Unit testing
 
+I have chosen Vue3 as a framework because it is intuitive and powerful tool. Moreover, its eco system where the Vuex and Vue Router are included, makes life much easier. Furthermore, the new CompositionAPI is making sure the code is compact and well arranged. Rich in tooling and integrations makes it quite customizable. Last but not least, lets not forget that is lightweight and performant.
+
 The code is logically divided in:
 
 - assets
