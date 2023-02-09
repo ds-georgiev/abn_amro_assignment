@@ -65,27 +65,4 @@ const store = useStore();
 
 store.dispatch("fetchTVShows");
 </script>
-<style lang="scss" scoped>
-@import "../assets/style/_colors.scss";
-
-.home-container {
-  height: 100%;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
-}
-.tile-container {
-  // display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-</style>
+<style lang="scss" scoped></style>

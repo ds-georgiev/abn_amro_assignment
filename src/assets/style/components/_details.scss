@@ -1,33 +1,32 @@
-.genre-wrapper {
+.details-wrapper {
   display: flex;
   width: 100vw;
-  height: calc(100vh - 120px);
-  padding: 60px;
+  height: calc(100vh - ($spacing-large * 2));
+  padding: $spacing-large;
 
   .side-bar {
-    // width: 20%;
-    max-width: 280px;
+    max-width: $sidebar-width;
     height: 100%;
     background-color: red;
 
     &-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      height: calc(100% - 40px);
-      padding: 20px;
+      gap: $spacing-normal;
+      height: calc(100% - $spacing-normal-xl);
+      padding: $spacing-normal;
       background-color: green;
 
       .image {
         img {
-          border-radius: 15px;
+          border-radius: $spacing-small;
         }
       }
 
       .show-info {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: $spacing-normal;
         height: 100%;
         background-color: yellow;
         align-items: flex-start;
@@ -37,14 +36,12 @@
           text-align: flex-start;
         }
         .genres {
-          display: flex;
-          flex-direction: column;
-          // gap: 10px;
-          align-items: flex-start;
+          display: block;
+          text-align: left;
 
           .genre {
             margin: 0;
-            padding-left: 10px;
+            padding-left: $spacing-small-s;
           }
         }
 
@@ -68,9 +65,9 @@
       .summary-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: $spacing-normal;
         height: 100%;
-        padding: 20px;
+        padding: $spacing-normal;
         background-color: green;
 
         .summary-title {
@@ -86,9 +83,9 @@
       .cast-wrapper {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: $spacing-normal;
         height: 100%;
-        padding: 20px;
+        padding: $spacing-normal;
         background-color: green;
 
         .cast-title {
@@ -98,7 +95,7 @@
         .cast-content {
           display: flex;
           flex-direction: row;
-          gap: 40px;
+          gap: $spacing-normal-xl;
           // max-height: 100%;
           background-color: yellow;
           justify-content: center;
@@ -110,7 +107,7 @@
           .cast-member {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: $spacing-small-s;
             height: 100%;
             align-items: middle;
 
@@ -119,15 +116,15 @@
 
               img {
                 border-radius: 50%;
-                width: 150px;
-                height: 150px;
+                width: $cast-image-size;
+                height: $cast-image-size;
                 object-fit: cover;
                 object-position: top;
               }
             }
             .cast-member-name,
             .cast-member-character-name {
-              max-width: 150px;
+              max-width: $cast-image-size;
               display: block;
               p {
                 margin: 0;

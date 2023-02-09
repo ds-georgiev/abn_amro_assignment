@@ -1,0 +1,38 @@
+@import "../utils/sizes";
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: $spacing-small-xs;
+
+  .form {
+    display: flex;
+    gap: $spacing-small;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: $border-line solid $text-color;
+    border-radius: $spacing-small-xs;
+    padding: $spacing-small;
+
+    &-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      outline: none;
+
+      &::placeholder {
+        color: rgba($text-color, 0.5);
+        font-size: $tile-title;
+      }
+    }
+
+    &-icon {
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+}

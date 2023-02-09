@@ -1,9 +1,17 @@
-@import "./colors";
-@import "./fonts";
-@import "./tile";
-@import "./details";
-@import "./genre";
-@import "./swiper";
+@import "./utils/sizes";
+@import "./utils/colors";
+@import "./utils/fonts";
+@import "./components/tile";
+@import "./components/navigation";
+@import "./components/details";
+@import "./components/genre";
+@import "./components/swiper";
+@import "./components/search";
+@import "./components/home";
+
+* {
+  box-sizing: border-box;
+}
 
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;

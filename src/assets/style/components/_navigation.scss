@@ -1,0 +1,39 @@
+@import "../utils/sizes";
+
+.nav {
+  background: #0d7963;
+  display: block;
+  padding: $spacing-small-s $spacing-normal $spacing-small-s 0;
+
+  @media (min-width: $media-tablet-up) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: $navigation-height;
+    line-height: $navigation-height;
+    font-size: $tile-title;
+
+    li {
+      border-right: $border-line solid #189b80;
+      float: left;
+      &:hover {
+        background: #086754;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 0 $spacing-normal-m;
+      color: #ccece6;
+      text-decoration: none;
+      &.router-link-active {
+        background: #086754;
+      }
+    }
+  }
+}

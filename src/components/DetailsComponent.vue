@@ -1,5 +1,5 @@
 <template>
-  <div class="genre-wrapper">
+  <div class="details-wrapper">
     <div class="side-bar">
       <div class="side-bar-wrapper">
         <div class="image">
