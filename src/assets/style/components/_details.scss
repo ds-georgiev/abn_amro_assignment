@@ -3,11 +3,14 @@
   width: 100vw;
   height: calc(100vh - ($spacing-large * 2));
   padding: $spacing-large;
+  gap: $spacing-normal-xl;
 
+  hr {
+    color: $hr-color;
+  }
   .side-bar {
     max-width: $sidebar-width;
     height: 100%;
-    background-color: red;
 
     &-wrapper {
       display: flex;
@@ -15,11 +18,12 @@
       gap: $spacing-normal;
       height: calc(100% - $spacing-normal-xl);
       padding: $spacing-normal;
-      background-color: green;
 
       .image {
         img {
           border-radius: $spacing-small;
+
+          box-shadow: 0 0 2px 2px $text-color;
         }
       }
 
@@ -28,7 +32,6 @@
         flex-direction: column;
         gap: $spacing-normal;
         height: 100%;
-        background-color: yellow;
         align-items: flex-start;
 
         .rating {
@@ -41,7 +44,7 @@
 
           .genre {
             margin: 0;
-            padding-left: $spacing-small-s;
+            padding-left: $spacing-small-xs;
           }
         }
 
@@ -55,12 +58,12 @@
   .content {
     width: 100%;
     height: 100%;
-    background-color: blue;
 
     &-wrapper {
       .title {
         display: block;
         text-align: left;
+        margin-left: $spacing-normal;
       }
       .summary-wrapper {
         display: flex;
@@ -68,7 +71,6 @@
         gap: $spacing-normal;
         height: 100%;
         padding: $spacing-normal;
-        background-color: green;
 
         .summary-title {
           display: block;
@@ -86,7 +88,8 @@
         gap: $spacing-normal;
         height: 100%;
         padding: $spacing-normal;
-        background-color: green;
+
+        @include scroll-bar;
 
         .cast-title {
           display: block;
@@ -96,8 +99,6 @@
           display: flex;
           flex-direction: row;
           gap: $spacing-normal-xl;
-          // max-height: 100%;
-          background-color: yellow;
           justify-content: center;
           max-height: 500px;
           align-items: left;

@@ -1,0 +1,21 @@
+@mixin scroll-bar {
+  scrollbar-color: $text-color transparent;
+  scrollbar-width: $spacing-small;
+
+  ::-webkit-scrollbar {
+    width: $spacing-small-s;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $text-color;
+    border-radius: $spacing-small;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}

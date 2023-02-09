@@ -5,6 +5,7 @@
   border-radius: $spacing-small;
   position: relative;
   padding: 0;
+  box-shadow: 0 0 2px 2px $text-color;
 
   @media (min-width: $media-tablet-up) {
     width: $tile-width;
@@ -15,8 +16,8 @@
     position: absolute;
     bottom: 0;
     padding: initial;
-    color: #fff;
-    background: $text-color;
+    color: $text-color;
+    background: $tile-title-color;
     border-radius: 0 0 $spacing-small $spacing-small;
     margin: 0;
     width: 100%;
@@ -33,7 +34,7 @@
     object-fit: cover;
     object-position: top;
     border-radius: $spacing-small;
-    opacity: 0.7;
+    opacity: 0.8;
 
     &:hover {
       opacity: 1;

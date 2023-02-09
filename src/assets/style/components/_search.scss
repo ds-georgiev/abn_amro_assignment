@@ -37,13 +37,13 @@
       outline: none;
 
       &::placeholder {
-        color: rgba($text-color, 0.5);
+        color: $text-color-dark;
         font-size: $tile-title;
       }
     }
 
     &-icon {
-      color: $text-color;
+      color: $text-color-dark;
       cursor: pointer;
     }
   }
