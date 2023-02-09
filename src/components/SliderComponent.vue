@@ -71,7 +71,7 @@ const breakpoints = {
   //   spaceBetween: 10,
   // },
   // when window width is >= 480px
-  480: {
+  630: {
     slidesPerView: 2,
     spaceBetween: 30,
   },
@@ -91,12 +91,12 @@ const breakpoints = {
     spaceBetween: 40,
   },
   // when window width is >= 1800px
-  1800: {
+  1900: {
     slidesPerView: 7,
     spaceBetween: 40,
   },
   // when window width is >= 2200px
-  2200: {
+  2700: {
     slidesPerView: 10,
     spaceBetween: 40,
   },

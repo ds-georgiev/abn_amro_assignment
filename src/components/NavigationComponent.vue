@@ -13,11 +13,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-import { useRouter } from "vue-router";
+import { ref } from "vue";
 
-const router = useRouter();
-const path = computed(() => router.currentRoute.value.path);
 const urls = ref([
   {
     title: "Home",

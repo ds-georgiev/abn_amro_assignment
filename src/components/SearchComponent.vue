@@ -25,12 +25,10 @@ import { useRouter } from "vue-router";
 
 const store = useStore();
 const router = useRouter();
-const lastSearch = ref("");
 
 const searchTerm = ref("");
 const data = store.state.tvShows;
 const searchResults = ref<TVShow[]>([]);
-const noResults = ref(false);
 
 const submitForm = () => {
   if (searchTerm.value) {
