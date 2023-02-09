@@ -25,10 +25,12 @@ import { useRouter } from "vue-router";
 
 const store = useStore();
 const router = useRouter();
+const lastSearch = ref("");
 
 const searchTerm = ref("");
 const data = store.state.tvShows;
 const searchResults = ref<TVShow[]>([]);
+const noResults = ref(false);
 
 const submitForm = () => {
   if (searchTerm.value) {
@@ -41,7 +43,7 @@ const submitForm = () => {
         name: "ShowDetails",
         params: { id: searchResults.value[0].id },
       });
-    } else if (searchResults.value.length > 1) {
+    } else {
       store.dispatch("setSearchedShows", searchResults.value);
 
       router.push({
@@ -49,7 +51,6 @@ const submitForm = () => {
         params: { type: "search" },
       });
     }
-
     searchTerm.value = "";
   }
 };
@@ -60,8 +61,11 @@ defineProps<{ data: TVShow }>();
 @import "../assets/style/_colors.scss";
 .search-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: white;
+  border-radius: 5px;
 
   .form {
     display: flex;

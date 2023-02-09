@@ -1,8 +1,6 @@
 <template>
   <div class="home-container">
     <h1>ABN Amro Movie Base</h1>
-    <SearchComponent></SearchComponent>
-
     <div class="tile-container">
       <div class="tile" v-for="tile in data.tiles" :key="tile.title">
         <router-link
@@ -72,7 +70,7 @@ store.dispatch("fetchTVShows");
 
 .home-container {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
