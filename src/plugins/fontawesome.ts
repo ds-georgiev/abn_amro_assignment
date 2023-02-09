@@ -10,6 +10,7 @@ import {
   faStar,
   faLanguage,
   faFilm,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUserSecret);
@@ -21,5 +22,6 @@ library.add(faCircleRight);
 library.add(faStar);
 library.add(faLanguage);
 library.add(faFilm);
+library.add(faBars);
 
 export default FontAwesomeIcon;

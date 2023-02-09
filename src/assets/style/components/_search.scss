@@ -7,16 +7,28 @@
   align-items: center;
   background: white;
   border-radius: $spacing-small-xs;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: transparent;
+
+  @media (min-width: $media-tablet-up) {
+    padding: 0;
+  }
 
   .form {
     display: flex;
     gap: $spacing-small;
     justify-content: center;
     align-items: center;
-    width: auto;
     border: $border-line solid $text-color;
     border-radius: $spacing-small-xs;
     padding: $spacing-small;
+    width: 100%;
+    background: #fff;
+
+    @media (min-width: $media-tablet-up) {
+      width: auto;
+    }
 
     &-input {
       width: 100%;
