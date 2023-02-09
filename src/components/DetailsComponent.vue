@@ -3,7 +3,7 @@
     <div class="side-bar">
       <div class="side-bar-wrapper">
         <div class="image">
-          <img :src="data.image" alt="show image" />
+          <img :src="data.image" alt="show image" data-test="show-image" />
         </div>
         <div class="show-info">
           <div class="rating">
@@ -12,10 +12,16 @@
               <font-awesome-icon icon="fa-solid fa-star" /> {{ data.rating }}
             </p>
           </div>
+
           <div class="genres">
             <h3>Genres:</h3>
 
-            <p v-for="genre in data.genres" :key="genre" class="genre">
+            <p
+              v-for="genre in data.genres"
+              :key="genre"
+              class="genre"
+              data-test="show-genres"
+            >
               <font-awesome-icon icon="fa-solid fa-film" /> {{ genre }}
             </p>
           </div>
@@ -32,7 +38,7 @@
     <div class="content">
       <div class="content-wrapper">
         <div class="title">
-          <h1>{{ data.title }}</h1>
+          <h1 data-test="show-title">{{ data.title }}</h1>
         </div>
         <hr />
         <div class="summary-wrapper">
@@ -46,11 +52,12 @@
           <div class="cast-title">
             <h2>Cast:</h2>
           </div>
-          <div class="cast-content">
+          <div class="cast-content" data-test="show-cast">
             <div
               class="cast-member"
               v-for="castMember in data.cast"
               :key="castMember.id"
+              data-test="show-cast-member"
             >
               <div class="cast-member-image" v-if="castMember.image">
                 <img :src="castMember.image" alt="cast member image" />
@@ -73,9 +80,7 @@
 <script lang="ts" setup>
 import { defineProps } from "vue";
 import { TVShowDetails } from "@types";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 defineProps<{ data: TVShowDetails }>();
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss"></style>

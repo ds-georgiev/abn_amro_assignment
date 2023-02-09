@@ -60,17 +60,12 @@ function prev() {
 }
 
 const breakpoints = {
-  // when window width is >= 550px
+  // when window width is >= 0px
   0: {
     slidesPerView: 1,
     spaceBetween: 10,
   },
-  // when window width is >= 550px
-  // 400: {
-  //   slidesPerView: 2,
-  //   spaceBetween: 10,
-  // },
-  // when window width is >= 480px
+  // when window width is >= 630px
   630: {
     slidesPerView: 2,
     spaceBetween: 30,
@@ -90,12 +85,12 @@ const breakpoints = {
     slidesPerView: 5,
     spaceBetween: 40,
   },
-  // when window width is >= 1800px
+  // when window width is >= 1900px
   1900: {
     slidesPerView: 7,
     spaceBetween: 40,
   },
-  // when window width is >= 2200px
+  // when window width is >= 2700px
   2700: {
     slidesPerView: 10,
     spaceBetween: 40,

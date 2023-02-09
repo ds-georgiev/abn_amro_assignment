@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="nav-wrapper"> -->
   <div class="nav">
     <div class="side-menu">
       <font-awesome-icon
@@ -17,7 +16,6 @@
     </ul>
     <SearchComponent></SearchComponent>
   </div>
-  <!-- </div> -->
 </template>
 
 <script lang="ts" setup>

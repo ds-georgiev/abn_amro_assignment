@@ -43,8 +43,6 @@ export default createStore({
   },
   mutations: {
     setTVShows(state, data) {
-      console.log("🚀 ~ file: index.ts:36 ~ tvShows ~ tvShows", data);
-
       state.tvShows = data;
 
       state.comedyShows = state.tvShows.filter((show) =>
@@ -61,8 +59,6 @@ export default createStore({
       );
     },
     setTVSwowDetails(state, data) {
-      console.log("🚀 ~ file: index.ts:63 ~ setTVSwowDetails ~ data", data);
-
       state.showDetails = JSON.parse(JSON.stringify(data));
     },
     setSearchedShows(state, data) {
@@ -129,10 +125,3 @@ export default createStore({
   modules: {},
   plugins: [vuexLocal.plugin],
 });
-
-// language: string;
-//   rating: {
-//     average: number;
-//   };
-//   summary: string;
-//   cast: CastMember[];

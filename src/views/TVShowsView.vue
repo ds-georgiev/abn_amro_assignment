@@ -35,16 +35,3 @@ const slidersData = [
   },
 ];
 </script>
-
-<style lang="scss" scoped>
-.tv-shows-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding: 50px;
-  max-width: -moz-available;
-  height: 100%;
-  text-align: start;
-  overflow: auto;
-}
-</style>

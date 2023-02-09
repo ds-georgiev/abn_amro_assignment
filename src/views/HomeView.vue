@@ -21,6 +21,8 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import { useStore } from "vuex";
+import TileComponent from "@/components/TileComponent.vue";
+import { RouterLink } from "vue-router";
 
 const data = ref({
   tiles: [
