@@ -1,0 +1,29 @@
+@import "./colors";
+@import "./fonts";
+@import "./tile";
+// @import "./home";
+@import "./swiper";
+
+#app {
+  // font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+}
+
+body {
+  // background: linear-gradient(
+  //   112.1deg,
+  //   rgb(32, 38, 57) 11.4%,
+  //   rgb(63, 76, 119) 70.2%
+  // );
+  font-family: $font-primary;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
