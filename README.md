@@ -85,7 +85,7 @@ There are three `test suits` each containing different `tests`:
 
 ## Used external `npm` packages
 
-- `fortawesome` - Icon manager
+- `fortawesome` - Icon library
 - `axios` - HTTP Client
 - `swiper` - Slider builder
 - `vuex-persist` - Persistent `vuex` state
