@@ -1,20 +1,15 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
-    component: HomeView,
+    component: () => import("../views/HomeView.vue"),
   },
   {
     path: "/tvshows",
     name: "TVShows",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/TVShowsView.vue"),
+    component: () => import("../views/TVShowsView.vue"),
   },
   {
     path: "/tvshows/:id",
@@ -25,6 +20,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/genre/:type",
     name: "Genre",
     component: () => import("../views/GenreView.vue"),
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: () => import("../views/util/PageNotFoundView.vue"),
   },
 ];
 

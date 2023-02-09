@@ -1,16 +1,29 @@
 .details-wrapper {
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: calc(100vh - ($spacing-large * 2));
-  padding: $spacing-large;
+  padding: $spacing-small;
   gap: $spacing-normal-xl;
+
+  @media (min-width: $media-tablet-up) {
+    padding: $spacing-large;
+  }
+
+  @media (min-width: $media-tablet-up) {
+    flex-direction: row;
+  }
 
   hr {
     color: $hr-color;
   }
   .side-bar {
-    max-width: $sidebar-width;
-    height: 100%;
+    width: 100%;
+
+    @media (min-width: $media-tablet-up) {
+      max-width: $sidebar-width;
+      width: 100%;
+    }
 
     &-wrapper {
       display: flex;
@@ -29,10 +42,17 @@
 
       .show-info {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         gap: $spacing-normal;
         height: 100%;
         align-items: flex-start;
+
+        @media (min-width: $media-tablet-up) {
+          flex-direction: column;
+          gap: $spacing-small;
+          justify-content: initial;
+        }
 
         .rating {
           display: block;
@@ -100,7 +120,7 @@
           flex-direction: row;
           gap: $spacing-normal-xl;
           justify-content: center;
-          max-height: 500px;
+          max-height: 450px;
           align-items: left;
           flex-wrap: wrap;
           overflow: auto;
